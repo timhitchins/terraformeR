@@ -7,7 +7,10 @@ terraformer <- NULL
     dep_wkt <- system.file("terraformer-wkt-bundle.js", package = "terraformer")
 
 
+    dep_parser2 <- system.file("terraformer-arcgis-bundle.js", package = "terraformer")
+
     terraformer$source(dep_core)
     terraformer$source(dep_parser)
     terraformer$source(dep_wkt)
+    terraformer$source(dep_parser2)
 }
