@@ -8,9 +8,9 @@ test_that("parser returns valid geojson", {
     auto_unbox = TRUE
   )
 
-  arc_geometry <- arcgis_parse(json)
+  arcgis_json <- arcgisToGeoJSON(json)
 
-  expect_true(is.list(arc_geometry))
+  expect_true(is.list(arcgis_json))
 })
 
 test_that("converter returns valid json", {
@@ -22,7 +22,7 @@ test_that("converter returns valid json", {
     auto_unbox = TRUE
   )
 
-  geojson <- arcgis_convert(json)
+  geojson <- geojsonToArcGIS(json)
 
   expect_true(is.list(geojson))
 })
