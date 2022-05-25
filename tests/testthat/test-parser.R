@@ -201,7 +201,7 @@ geojson <- '{
 
 test_that("parser returns valid geojson", {
   expect_warning(
-    gj <- arcgisToGeoJSON(esri_json),
+    gj <- arcgis_to_geojson(esri_json),
     "Object converted in non-standard crs"
   )
 
@@ -209,7 +209,7 @@ test_that("parser returns valid geojson", {
 })
 
 test_that("converter returns valid json", {
-  arc_json <- geojsonToArcGIS(geojson)
+  arc_json <- geojson_to_arcgis(geojson)
 
   expect_true(is.list(arc_json))
 })
