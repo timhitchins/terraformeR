@@ -3,7 +3,7 @@ geojson_to_arcgis <- function(json, id = NULL) {
     # parse an ArcGIS Geometry to GeoJSON
     tryCatch(
         {
-            terraformer$call(
+            terraformeR$call(
                 "Terraformer.geojsonToArcGIS",
                 V8::JS(json),
                 id
@@ -20,7 +20,7 @@ arcgis_to_geojson <- function(json, id = NULL) {
     # convert a GeoJSON object into an ArcGIS geometry
     tryCatch(
         {
-            terraformer$call(
+            terraformeR$call(
                 "Terraformer.arcgisToGeoJSON",
                 V8::JS(json),
                 id
