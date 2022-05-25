@@ -1,3 +1,4 @@
 ^terraformeR\.Rproj$
 ^\.Rproj\.user$
 node_modules
+^LICENSE\.md$
